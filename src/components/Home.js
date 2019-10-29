@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 import List from "./List";
 import Form from "./Form";
 import Post from "./Posts";
 
-const App = () => (
+const Home = () => (
   <div className="row mt-5">
     <div>
       <h2>Articles</h2>
@@ -20,4 +20,4 @@ const App = () => (
   </div>
 );
 
-export default App;
+export default Home;

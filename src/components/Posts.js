@@ -16,7 +16,7 @@ export class Post extends Component {
     this.props.getData();
   }
   render = () => (
-      <ul className="list-group list-group-flush">
+      <ul>
         {this.props.articles.map(el => (
           <li className="list-group-item" key={el.id}>
             {el.title}
