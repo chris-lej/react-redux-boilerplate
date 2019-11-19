@@ -7,7 +7,6 @@ import About from "./components/About";
 const App = () => (
   <Router>
     <header className="App-header">
-      <h1 className="App-title">Welcome to React</h1>
       <MainMenu />
     </header>
     <div>
