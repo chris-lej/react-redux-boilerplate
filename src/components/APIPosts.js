@@ -12,17 +12,25 @@ const mapDispatchToProps = (dispatch) => ({
 
 export class Post extends Component {
   componentDidMount = () => {
-    console.log(this.props.getData())
     this.props.getData();
   }
   render = () => (
-      <ul>
-        {this.props.articles.map(el => (
-          <li className="list-group-item" key={el.id}>
-            {el.title}
-          </li>
-        ))}
-      </ul>
+    <div className="col">
+      <div className="row">
+        <h3>API posts</h3>
+      </div>
+
+      <div className="row">
+        <ul>
+          {this.props.articles.map(el => (
+            <li className="list-group-item" key={el.id}>
+              {el.title}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
     );
 }
 export default connect(

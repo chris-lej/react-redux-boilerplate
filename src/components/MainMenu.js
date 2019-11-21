@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from 'reactstrap';
 
 const MainMenu = () => (
   <div>
     <Link to="/">
-      <button>home</button>
+      <Button>home</Button>
     </Link>
     <Link to="/about">
-      <button>About</button>
+      <Button>About</Button>
     </Link>
   </div>
 );

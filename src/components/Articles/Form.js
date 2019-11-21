@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addArticle } from "../actions/index";
+import { Button } from 'reactstrap';
+import { addArticle } from "../../actions/index";
 
 const mapDispatchToProps = (dispatch) => ({
   addArticle: article => dispatch(addArticle(article))
@@ -30,18 +31,26 @@ class Form extends Component {
   render = () => {
     const { title } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div>
-          <label htmlFor="title">Title</label>
-          <input
-            type="text"
-            id="title"
-            value={title}
-            onChange={this.handleChange}
-          />
+      <div className="col">
+        <div className="row">
+          <h3>Add a new article</h3>
         </div>
-        <button type="submit">SAVE</button>
-      </form>
+
+        <div className="row">
+          <form onSubmit={this.handleSubmit}>
+            <div>
+              <label htmlFor="title">Title</label>
+              <input
+                type="text"
+                id="title"
+                value={title}
+                onChange={this.handleChange}
+              />
+            </div>
+            <Button type="submit">SAVE</Button>
+          </form>
+        </div>
+      </div>
     );
   }
 }
