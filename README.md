@@ -13,3 +13,10 @@ To run this project:
 
 ---
 *project will be running on `http://localhost:3000`
+
+---
+@TODO:
+- Error handling (currently storing errors in Redux only, not reacting to them);
+- Improve `<Home />` component. Consider spliting containing components in their own (such as a `<DataDisplay />` component maybe - see all possibilities 🔎);
+- In `actions/index.js` consider creating `action creators` for each action that will be dispatched (will improve portability and testing ✅)
+- Test coverage;
