@@ -12,7 +12,6 @@ const initialState = {
 
 const rootReducer = (state = initialState, action) => {
   if (action.type === DATA_POSTED) {
-    alert('Formatted data has been successfully POSTed! Please see Redux tree for full data set!')
     return Object.assign({}, state, {
       postedData: action.payload
     })
