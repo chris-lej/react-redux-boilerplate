@@ -1,10 +1,15 @@
-## Chris Lejeune Boilerplate
+![HubSpot logo](./src/images/hubspot_logo.png)
+## Chris Lejeune - HubSpot Assessment
 
-This project is a very simple boilerplate with all you need to get up and running with your small projects.
-Keep in mind this was created with `create-react-app` so deep customization will require to eject the project. 🚀
-Think twice!
+This project was created specifically to handle the Assessment Test provided by HubSpot for the Front End Software Engineer position available with the company.
 
-Already wired up with `Redux` and `React-Router`
+To run this project:
 
+1 - Clone it (or download) locally;
 
-Have fun!🎡
+2 - Don't forget to install the dependencies with `yarn install` (or npm if you prefer)
+
+3 - Run* the project `yarn run start` and have fun! 🎡
+
+---
+*project will be running on `http://localhost:3000`
