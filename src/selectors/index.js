@@ -1,5 +1,5 @@
 // Original Data Tree //
-export const apiDataTree = (state) => state.apiData || [];
+export const apiDataTree = (state) => state.apiData.partners || [];
 export const apiDataExists = (state) => apiDataTree(state).length || false;
 
 // Formatted Data Tree //
