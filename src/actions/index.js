@@ -8,7 +8,7 @@ import {
 export const postData = (dataToPost = {}) => async (dispatch) => {
   try {
   console.log('here in actions', dataToPost)
-    const response = await axios.post(`https://candidate.hubteam.com/candidateTest/v3/problem/result?userKey=${process.env.REACT_APP_HUBSPOT_API_KEY}`, dataToPost)
+    const response = await axios.post(``, dataToPost)
     alert('Formatted data has been successfully POSTed! Please see Redux tree for full data set!')
     dispatch({ type: DATA_POSTED, payload: response.data})
   } catch (error) {
@@ -19,8 +19,15 @@ export const postData = (dataToPost = {}) => async (dispatch) => {
 };
 
 export const getData = () => async (dispatch) => {
+  const searchTerm = 'term=prenatal-yoga';
+  const searchLocation = '78745';
+  const headers = {
+    'Authorization': `Bearer ${process.env.REACT_APP_YELP_KEY}`
+  }
   try {
-    const response = await axios.get(`https://candidate.hubteam.com/candidateTest/v3/problem/dataset?userKey=${process.env.REACT_APP_HUBSPOT_API_KEY}`)
+    const response = await axios.get(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?${searchTerm}&location=${searchLocation}`, {
+      headers
+    })
     dispatch({ type: DATA_LOADED, payload: response.data})
     console.log(response.data)
     return response.data;
