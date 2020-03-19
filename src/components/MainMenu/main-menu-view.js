@@ -8,9 +8,9 @@ import {
   NavLink,
   Button
 } from 'reactstrap';
-import preNatalSymbol from '../images/pregnant.png'
+import preNatalSymbol from '../../images/pregnant.png'
 
-const MainMenu = () => (
+const MainMenuView = () => (
   <div>
     <Navbar color="light" light expand="md" className="mb-3">
       <NavbarBrand>
@@ -28,4 +28,4 @@ const MainMenu = () => (
 );
 
 
-export default MainMenu;
+export default MainMenuView;

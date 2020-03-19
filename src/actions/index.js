@@ -1,26 +1,12 @@
 import axios from 'axios'
 import {
   DATA_LOADED,
-  DATA_POSTED,
   ERROR_CAPTURED
 } from "../constants/action-types";
 
-export const postData = (dataToPost = {}) => async (dispatch) => {
-  try {
-  console.log('here in actions', dataToPost)
-    const response = await axios.post(``, dataToPost)
-    alert('Formatted data has been successfully POSTed! Please see Redux tree for full data set!')
-    dispatch({ type: DATA_POSTED, payload: response.data})
-  } catch (error) {
-    alert('Ops! Seems like there was an error. Please see Redux tree for error data set!')
-    console.log(error)
-    dispatch({ type: ERROR_CAPTURED, error})
-  }
-};
-
 export const getData = () => async (dispatch) => {
   const searchTerm = 'term=prenatal-yoga';
-  const searchLocation = '78745';
+  const searchLocation = 'Austin, TX';
   const headers = {
     'Authorization': `Bearer ${process.env.REACT_APP_YELP_KEY}`
   }
@@ -38,6 +24,5 @@ export const getData = () => async (dispatch) => {
 };
 
 export default {
-  postData,
   getData
 }
