@@ -6,7 +6,8 @@ import {
 const initialState = {
   apiData: [],
   postedData: {},
-  error: null
+  error: null,
+  searchCategory: ''
 };
 
 const rootReducer = (state = initialState, action) => {
